@@ -1,0 +1,71 @@
+Here’s a simple registration page. Save it as `index.html` and open it in a browser. The form is visual only—it doesn’t store or submit registrations yet.
+
+````html name=index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      margin: 0;
+    }
+
+    form {
+      background: white;
+      width: min(320px, 85vw);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px #0002;
+    }
+
+    h1 { margin-top: 0; }
+
+    label {
+      display: block;
+      margin-top: 14px;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 11px;
+      margin-top: 20px;
+      border: 0;
+      border-radius: 4px;
+      background: #1769e0;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Create an account</h1>
+
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required minlength="8">
+
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
+````
